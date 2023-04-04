@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto JS1</title>
+    <link rel="stylesheet" href="./style/style.css">
+    <script src="./script/script.js" defer></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+</head>
+<body>
+    <header>
+        <nav class="navbar bg-dark navbar-expand-lg bg-body-tertiary" data-bs-theme ="dark">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">Projeto JS1</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                  <a class="nav-link active" aria-current="page" href="#" id="inicio">Home</a>                  
+                </div>
+              </div>
+            </div>
+          </nav>
+    </header>
+    <main>
+        <section class="exer1">
+          <h2>Exercicio 1</h2>
+          <small>Calculo salario + aumento</small>
+          <div class="input_calc">
+            <input type="number" placeholder="Salário ex: 1500" name="n1" id="n1">
+            <input type="number" placeholder="Aumento % ex: 10" name="n2" id="n2">
+          </div>
+          <div class="btnResult">
+            <button type="button" onclick="aumento()" class="btn btn-light">Calcular</button>
+            <span id="resultado1"></span>
+          </div>
+        </section>
+        <section class="exer2">
+          <h2>Exercicio 2</h2>
+          <small>Calculando a área de um triângulo</small>
+          <div class="labelExer2">
+            <label for="base">Entre com a base: </label><br>
+            <input type="number" id="base"><br>
+            <label for="altura">Entre com a altura: </label><br>
+            <input type="number" id="altura"><br>
+            <label for="areaTotal">Area: </label><br>
+            <input type="text" name="areaTotal" id="areaTotal" readonly><br>
+            <button type="button" onclick="areaTriangulo()" class="btn btn-light">Calcular Área</button>
+          </div>          
+        </section>
+        <section class="exer3">
+          <h2>Exercicio 3</h2>
+          <small>Cauculando média ponderada de 2 notas</small>
+          <div class="labelExer3">
+            <label for="nota1">Nota da P1: </label><br>
+            <input type="number" id="nota1"><br>
+            <label for="nota2">Nota da P2: </label><br>
+            <input type="number" id="nota2"><br>
+            <label for="mediaPonderada">Média Ponderada: </label>
+            <label id="mediaResultado"></label><br>
+            <button type="button" onclick="mediaPonderada()" class="btn btn-light">Calcular</button>
+          </div>
+        </section>
+        <section class="exer4">
+          <h2>Exercício 4</h2>
+          <small>Receber ano de nascimento e formular como feito abaixo</small>
+          <div class="labelExer4">
+            <label for="nascimento">Digite seu ano de nascimento: </label>
+            <input type="number" id="nascimento">
+            <button type="button" onclick="calculoIdade()" class="btn btn-light">Calcular</button>
+          </div>
+          <table>
+            <tr>
+              <td>Idade:</td>
+              <td><span id="idadeAnos"></span></td>
+            </tr>
+            <tr>
+              <td>Idade em meses:</td>
+              <td><span id="idadeMeses"></span></td>
+            </tr>
+            <tr>
+              <td>Idade em dias:</td>
+              <td><span id="idadeDias"></span></td>
+            </tr>
+            <tr>
+              <td>Idade em horas:</td>
+              <td><span id="idadeHoras"></span></td>
+            </tr>
+            <tr>
+              <td>Idade em minutos:</td>
+              <td><span id="idadeMinutos"></span></td>
+            </tr>
+            <tr>
+              <td>Idade em semanas:</td>
+              <td><span id="idadeSemanas"></span></td>
+            </tr>
+            <tr>
+              <td>Idade em 2050:</td>
+              <td><span id="idade2050"></span></td>
+            </tr>
+          </table>
+        </section>
+        <section class="exer5">
+          <h2>Exercício 5</h2>
+          <small>Cauculando média de km/l </small>
+          <div class="labelExer5">
+            <label for="distancia">Digite a distância percorrida: </label><br>
+            <input type="number" placeholder="Ex: 30 (km)" name="distancia" id="distancia"><br>
+            <label for="gasosa">Quantos litros de gasolina: </label><br>
+            <input type="number" name="gasosa" placeholder="Ex: 20(Litros)" id="gasosa"><br>
+            <button type="button" onclick="calculoGasosa()" class="btn btn-light">Calcule</button><br>
+            <input type="text" id="resultadoGasosa" placeholder="Media em Km/L" readonly>
+          </div>
+        </section>
+        <section class="exer6">
+          <h2>Exercício 6</h2>
+          <small>assumindo o valor por hora de R$30 e que os R$ 1,50 seja por dia e o dia tendo 8 horas de trabalho</small>
+          <div class="labelExer6">
+            <label for="hrTrabalhadas">Horas Trabalhadas: </label>
+            <input type="number" id="hrTrabalhadas" name="hrTrabalhadas">
+            <button type="button" onclick="calculoTrabalho()" class="btn btn-light">Calcular</button><br><br><br>
+            <label for="salarioBruto">Salario Bruto: </label>
+            <input type="text" name="salarioBruto" id="salarioBruto" readonly><br><br>
+            <label for="alimentacao">Desconto de Alimentação: </label>
+            <input type="text" name="alimentacao" id="alimentacao" readonly><br><br>
+            <label for="salarioLiquido">Salario Liquido: </label>
+            <input type="text" name="salarioLiquido" id="salarioLiquido" readonly>
+          </div>
+        </section>
+        <section class="exer7">
+          <h2>Exercício 7</h2>
+          <small>Gerar numero aleatorio de 1 ~ 100</small>
+          <div class="labelExer7">
+            <button type="button" onclick="gerarNumero()" class="btn btn-light">Gerar Número Aleatório</button><br><br>
+            <label for="number">Número Aleatório: </label>
+            <input type="text" name="number" id="number" readonly><br><br>
+            <label for="msg" id="msg"></label>
+
+          </div>
+        </section>
+    </main>
+    <footer>
+      <h4>Desenvolvido por Gabriel Yamaoka</h4>
+      <p>Aula de Desenvolvimento Web</p>
+      <small><a href="#inicio"> voltar ao inicio</small>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+</body>
+</html>
